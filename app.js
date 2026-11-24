@@ -30,6 +30,7 @@ const STREAMS = ['py', 'ch', 've', 'ls', 'kb'];
 const merge = (d, s) => { const o = Array.isArray(d) ? [] : {}; for (const k in d) o[k] = (d[k] && typeof d[k] === 'object' && !Array.isArray(d[k])) ? merge(d[k], (s && s[k]) || {}) : (s && s[k] !== undefined ? s[k] : d[k]); return o; };
 let S = (() => { let s = {}; try { s = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {} return merge(DEF, s); })();
 if (!S.lang) { const n = (navigator.language || 'en').slice(0, 2); S.lang = I18N[n] ? n : 'en'; }
+S.fs = Math.max(80, Math.min(160, +S.fs || 100));
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
 const setK = (k, v) => { const p = k.split('.'); let o = S; while (p.length > 1) o = o[p.shift()]; o[p[0]] = v; };
 const getK = k => k.split('.').reduce((o, p) => o && o[p], S);
