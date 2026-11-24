@@ -1,6 +1,6 @@
 /* NUMEROSUTRAS – interface (engine, transit analyser, files, report, about) */
 'use strict';
-const KEY = 'numerosutras.v1', VERSION = '1.0.1';
+const KEY = 'numerosutras.v1', VERSION = '1.0.2';
 const SAMPLE = {fn: 'Narendra', mn: '', ln: 'Modi', full: 'Narendra Modi', dob: '1950-09-17', g: 'm'};
 const DEF = {
   lang: '', theme: 'auto', fs: 100, page: 'engine', view: 'dash', ttab: 'cur', setOpen: 0,
@@ -464,7 +464,7 @@ function aboutShell() {
 const SHELL = {engine: engineShell, transit: transitShell, files: filesShell, report: reportShell, about: aboutShell};
 const OUT = {engine: engineOut, transit: transitOut, files: filesOut, report: reportBody, about: () => ''};
 function applyTheme() { const d = S.theme === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : S.theme; document.documentElement.dataset.theme = d; const m = $('meta[name=theme-color]'); if (m) m.content = d === 'dark' ? '#0b1120' : '#1e3a8a'; }
-function applyChrome() { const h = document.documentElement; h.lang = S.lang; h.dir = S.lang === 'ar' ? 'rtl' : 'ltr'; h.style.fontSize = S.fs + '%'; document.body.className = 'pg-' + S.page; applyTheme(); }
+function applyChrome() { const h = document.documentElement; h.lang = S.lang; h.dir = S.lang === 'ar' ? 'rtl' : 'ltr'; h.style.fontSize = (16 * S.fs / 100) + 'px'; document.body.className = 'pg-' + S.page; applyTheme(); }
 function renderOut() { const e = $('#out'); if (e) e.innerHTML = OUT[S.page](); }
 function renderAll() {
   applyChrome();
