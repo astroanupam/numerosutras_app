@@ -1,6 +1,6 @@
 /* NUMEROSUTRAS – interface (engine, transit analyser, files, report, about) */
 'use strict';
-const KEY = 'numerosutras.v1', VERSION = '1.0.2';
+const KEY = 'numerosutras.v1', VERSION = '1.0.3';
 const SAMPLE = {fn: 'Narendra', mn: '', ln: 'Modi', full: 'Narendra Modi', dob: '1950-09-17', g: 'm'};
 const DEF = {
   lang: '', theme: 'auto', fs: 100, page: 'engine', view: 'dash', ttab: 'cur', setOpen: 0,

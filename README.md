@@ -1,6 +1,6 @@
 # NUMEROSUTRAS
 
-Multi-stream numerology engine – Pythagorean, Chaldean, Vedic, Lo Shu and Kabbalah – with a transit analyser, profile files, publishable reports and an About Us page.
+Multistream numerology matrix – Pythagorean, Chaldean, Vedic, Lo Shu and Kabbalah – with a transit analyser, profile files, publishable reports and an About Us page.
 
 - **Languages:** English, हिन्दी, Русский, Español, Italiano, العربية (right-to-left)
 - **Theme:** light, dark or automatic · **Text size:** A− / A+ (80 %–160 %)

@@ -1,7 +1,7 @@
 {
   "name": "NUMEROSUTRAS",
   "short_name": "NumeroSutras",
-  "description": "Multi-stream numerology engine: Pythagorean, Chaldean, Vedic, Lo Shu and Kabbalah, with transits, files and reports.",
+  "description": "Multistream numerology matrix: Pythagorean, Chaldean, Vedic, Lo Shu and Kabbalah, with transits, files and reports.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
